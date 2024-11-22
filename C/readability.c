@@ -8,7 +8,7 @@ int round_double(double number);
 int main(void){
 
     string text = get_string("text: ");
-    double index = get_score(text);
+    int index = get_score(text)+0.5;
 
     if(index < 0){
         printf("Before Grade 1\n");
@@ -47,11 +47,8 @@ double get_score( string text){
         }
         i++; 
     } 
-    printf("letters: %f, words: %f, setences: %f\n", letters, words, setences);
     double l = (letters/words) * 100;   
     double s = (setences/words) * 100; 
-    printf("L: %f, S: %f\n", l,s);
-    
 
     index = 0.0588 * l - 0.296 * s - 15.8;
 
