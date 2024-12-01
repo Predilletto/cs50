@@ -1,0 +1,12 @@
+sort1 uses: Bubble Sort 
+
+How do you know?: it took longer to solve random and reversed arrays, but was really quick to solve sorted arrays.  
+
+sort2 uses: Merge Sort      
+
+How do you know?: it took the same time to every single test, and it was quick because only took O(n log n)
+
+sort3 uses: Selection Sort
+
+How do you know?: it took the same longer to solve the three problems. 
+ 
