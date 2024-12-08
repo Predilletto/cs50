@@ -3,9 +3,9 @@
 #include <stdio.h> 
 
 double get_score(string text);
-int round_double(double number); 
 
-int main(void){
+int main(void)
+{
 
     string text = get_string("text: ");
     int index = get_score(text)+0.5;
@@ -35,18 +35,23 @@ double get_score( string text){
 
     while(text[i] != '\0'){
         char c = text [i];
+        char d = text [i+1];
 
         if(isalpha(c)){
-            if(!isalpha(text[i+1])){
+            if(!isalpha(d)){
+                if(d != '\'' && d != '-'){
                 words++;
+
+                } 
             }
             letters++;
         }
-        else if(c == '.' || c == '!' || c== '?') {
+        else if((c == '.' && d !='.') || c == '!' || c== '?') {
             setences++; 
         }
         i++; 
     } 
+  
     double l = (letters/words) * 100;   
     double s = (setences/words) * 100; 
 
